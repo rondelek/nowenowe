@@ -255,11 +255,11 @@ a, a:visited {
   position: absolute;
   max-height: 70%;
   top: 90px;
-  outline: 6px solid white;
   padding: 10px;
 }
 
 .default-circle-left {
+  border: 6px solid white;
   left: 100px;
   border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
 }
