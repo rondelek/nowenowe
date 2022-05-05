@@ -175,7 +175,7 @@ a, a:visited {
 }
 
 .main-info img:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .main-info .bonjour {
@@ -220,6 +220,7 @@ a, a:visited {
   animation: bounce-in-left 1.2s 1.5s both;
   }
 
+/* flags / monuments */
 
 .courses-flags {
   position: relative;
@@ -251,6 +252,30 @@ a, a:visited {
   animation: rotate-in-center 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.circle-people {
+  position: absolute;
+  max-height: 70%;
+  top: 90px;
+  outline: 6px solid white;
+  padding: 10px;
+}
+
+.default-circle-left {
+  left: 100px;
+  border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
+}
+
+.default-circle-right {
+  right: 100px;
+  border-radius: 34% 66% 45% 55% / 62% 44% 56% 38%;
+}
+
+
+
+
+
+
+/* bubbles */
 
 .bubble-big-left {
   height: 100px!important;
