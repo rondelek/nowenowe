@@ -659,5 +659,134 @@ a, a:visited {
   opacity: 0.8;
 }
 
+/*/////////////////////to tero bem////////////////////////*/
+
+.section__container{
+  background:linear-gradient(135deg,#ffd693, #ffd693);
+  width: 100%;
+  -webkit-mask:
+          linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,
+          conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/10px 40px repeat-x,
+          conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /10px 40px repeat-x;
+  mask:
+          linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,
+          conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/80px 40px repeat-x,
+          conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /80px 40px repeat-x;
+}
+
+
+.section__courses{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__courses__container{
+  max-width: 1800px; /*bo na dużych rozdzielczościach odlatują elementy a powinny byc w srodku mniej wiecej zawsze*/
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3rem 0;
+}
+
+.section__courses__container__item{
+  /* jak dziecko ma pozycje absolute to szuka pierwszego rodzica z określoną pozycją,
+  relative nic nie psuje więc tak to się zwykło robic */
+  position: relative;
+
+  margin: 1rem 3rem;
+
+  /*to niestety zabite dechami tutaj ważne 1*/
+  width: 500px;
+  height: 350px;
+}
+
+.section__courses__container__item__img__box{
+  /*tym w zasadzie steruje się całą wielkością elementu*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section__courses__container__item__img__box__img{
+  /*to niestety zabite dechami tutaj ważne 2*/
+  width: 500px;
+  height: 350px;
+}
+
+.section__courses__container__item__text__box{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffd693;
+
+  color:white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.11),
+                1px -1px 0 rgba(0, 0, 0, 0.11),
+                -1px 1px 0 rgba(0, 0, 0, 0.11),
+                1px 1px 0 rgba(0, 0, 0, 0.11);
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: Lato;
+}
+
+.section__courses__container__item__text__box__text{
+  text-align: center;
+}
+
+
+.section__courses__container__item:hover .section__courses__container__item__text__box{
+  opacity: 1;
+}
+
+/*///////////////////////////////////////////////////////////*/
+/*//////// '--' to w bem modyfikator ////////////////////////*/
+/*//////// to mocno naciągany przykład ale działa ///////////*/
+/*///////////////////////////////////////////////////////////*/
+/*te 4 poprawnie powinny być oparte o pseudoelementy -> before lub after (ale wtedy średnio pokazac jak dziala modyfikator wiec elo)*/
+.img__circle {
+  border: 6px solid transparent;
+  padding: 10px;
+}
+.img__circle--white {
+  border: 6px solid white;
+  padding: 10px;
+}
+.img__circle--left {
+  border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
+}
+.img__circle--right {
+  border-radius: 34% 66% 45% 55% / 62% 44% 56% 38%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
