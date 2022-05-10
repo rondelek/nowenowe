@@ -88,6 +88,7 @@ a, a:visited {
   align-self: center;
 }
 
+
 .sign-up a {
   background: black;
   color: white;
@@ -101,6 +102,10 @@ a, a:visited {
   opacity: 0.75;
   color: black;
   transition: .5s;
+}
+
+.sign-up a:active {
+  color: white;
 }
 
 .box {
@@ -154,8 +159,24 @@ a, a:visited {
   animation-delay: 2.5s;
 }
 
-.language-right:hover::before {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+.language-list li:hover {
+  cursor: pointer;
+}
+
+.language-list li::after {
+  position: absolute;
+  content: "";
+  background: darkblue;
+  height: 3px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: .5s;
+}
+
+.language-list li:hover::after {
+  transform: scaleX(0.4);
 }
 
 .language-left {
@@ -296,6 +317,7 @@ a, a:visited {
 .text {
   color: white;
   font-size: 20px;
+  font-family: Lato;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -408,6 +430,7 @@ a, a:visited {
     opacity: 0;
   }
 }
+
 
 @keyframes animateBubble {
   0% {
@@ -621,6 +644,30 @@ a, a:visited {
   }
 }
 
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
 
 
 #social-cal {
@@ -722,7 +769,9 @@ a, a:visited {
   height: 350px;
 }
 
-.section__courses__container__item__text__box{
+
+
+.section__courses__container__item__text__box {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -749,12 +798,15 @@ a, a:visited {
   font-family: Lato;
 }
 
-.section__courses__container__item__text__box__text{
+.section__courses__container__item__text__box__text,
+.section__languages__contwhite__item__text__box__text{
   text-align: center;
 }
 
 
-.section__courses__container__item:hover .section__courses__container__item__text__box{
+
+
+.section__courses__container__item:hover .section__courses__container__item__text__box {
   opacity: 1;
 }
 
@@ -771,6 +823,13 @@ a, a:visited {
   border: 6px solid white;
   padding: 10px;
 }
+
+.img__circle--yellow {
+  border: 6px solid #ffd693;
+  padding: 10px;
+}
+
+
 .img__circle--left {
   border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%;
 }
@@ -778,11 +837,78 @@ a, a:visited {
   border-radius: 34% 66% 45% 55% / 62% 44% 56% 38%;
 }
 
+/* languages */
+
+.section__languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__languages__contwhite {
+  max-width: 1800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.section__languages__contwhite__item {
+  position: relative;
+  margin: 1rem 3rem;
+  width: 500px;
+  height: 350px;
+}
 
 
+.section__languages__contwhite__item__img__box {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
 
+.section__languages__contwhite__item__img__box__img {
+  width: 500px;
+  height: 350px;
+}
 
+.section__languages__contwhite__item__text__box {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffd693;
+
+  color:white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.11),
+                1px -1px 0 rgba(0, 0, 0, 0.11),
+                -1px 1px 0 rgba(0, 0, 0, 0.11),
+                1px 1px 0 rgba(0, 0, 0, 0.11);
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: Lato;
+}
+
+.section__languages__contwhite__item:hover .section__languages__contwhite__item__text__box{
+  -webkit-animation: swirl-in-fwd 0.6s ease-out both;
+  animation: swirl-in-fwd 0.6s ease-out both;
+}
 
 
 
