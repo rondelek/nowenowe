@@ -9,7 +9,14 @@
 
 :root {
   --outline-color: transparent;
+  /*--outline-color: red;*/
 }
+
+html  {
+  font-size:62.5%; /* =10px */
+}
+
+
 
 header {
   position: fixed;
@@ -102,54 +109,16 @@ a, a:visited {
   color: white;
 }
 
-.main__container {
-  outline: var( --outline-color) 2px solid;
-  position: relative;
-  display: flex;
-  padding-top: 10px;
-  margin-top: 40px;
-  top: 70px;
-  height: 550px;
-  justify-content: flex-left;
-  width: 100%;
-  overflow: hidden; 
-  background-color: #f8c36f;
-}
 
-.main__container__text {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  overflow: scroll;
-  font-family: Lato;
-  padding-top: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: 150px;
-  max-width: 800px;
-  max-height: 500px;
-  border-radius: 1000px;
-  background-color: #FFD38C;
-  border-radius: 34% 66% 45% 55% / 62% 44% 56% 38%;
-}
 
-.main__container__text--heading {
-  padding-top: 10px;
-  font-size: 50px;
-  font-weight: bolder;
-  padding-bottom: 10px;
-}
 
-.main__container__text--description {
-  font-size: 20px;
-  line-height: 30px;
-}
 
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 4rem;
 }
 
 .button a {
@@ -161,6 +130,7 @@ a, a:visited {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  font-size: 2.2rem;
 }
 
 .button a:hover {
@@ -233,61 +203,6 @@ a, a:visited {
 }
 
 
-.main__container img {
-  position: absolute;
-  height: 100%;  
-  bottom: 0;
-  opacity: 1;
-}
-
-.main__container img:hover {
-  opacity: 0.8;
-}
-
-.main__container .bonjour {
-  /* height: 100px!important;
-  margin-right: 420px;
-  margin-top: 120px;
-  top: 100px;
-  right: 0; */
-  position: absolute;
-  /* height: 550px; */
-  max-height: 500px;
-  margin-left: 1100px;
-  /* top: 60px; */
-  bottom: 30px;
-  float: right;
-  /* animation: bounce-in-right 1.2s 1.5s both; */
-  animation: bounce-in-right 1.2s 2.8s both;
-  }
-
-.main__container .hello {
-  height: 100px!important;
-  margin-left: 420px;
-  margin-top: 100px;
-  top: 50px;
-  left: 0;
-  animation: bounce-in-left 1.2s 1.5s both;
-}
-
-.main__container .ohayou {
-  height: 100px!important;
-  margin-right: 420px;
-  margin-top: 270px;
-  top: 100px;
-  right: 0;
-  float: right;
-  animation: bounce-in-right 1.2s 1.5s both;
-  }
-
-.main__container .ciao {
-  height: 100px!important;
-  margin-left: 420px;
-  margin-top: 250px;
-  top: 50px;
-  left: 0;
-  animation: bounce-in-left 1.2s 1.5s both;
-  }
 
 /* flags / monuments */
 
@@ -824,16 +739,16 @@ a, a:visited {
 /*/////////////////////to tero bem////////////////////////*/
 
 .section__container{
-  background:linear-gradient(135deg,#ffd693, #ffd693);
-  width: 100%;
-  -webkit-mask:
-          linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,
-          conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/10px 40px repeat-x,
-          conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /10px 40px repeat-x;
-  mask:
-          linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,
-          conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/80px 40px repeat-x,
-          conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /80px 40px repeat-x;
+  /*background:linear-gradient(135deg,#ffd693, #ffd693);*/
+  /*width: 100%;*/
+  /*-webkit-mask:*/
+  /*        linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,*/
+  /*        conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/10px 40px repeat-x,*/
+  /*        conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /10px 40px repeat-x;*/
+  /*mask:*/
+  /*        linear-gradient(#000 0 0) center/100% calc(100% - 80px) no-repeat,*/
+  /*        conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/80px 40px repeat-x,*/
+  /*        conic-gradient(from 135deg at top   ,#0000,#000 1deg 89deg,#0000 90deg) top   /80px 40px repeat-x;*/
 }
 
 

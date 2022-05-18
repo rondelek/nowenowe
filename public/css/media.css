@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1300px) {
+    html {
+        font-size: .6rem;
+        /*color:red;*/
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    html {
+        font-size: .55rem;
+        /*color:blue;*/
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    html {
+        font-size: .45rem;
+        /*color:green;*/
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    html {
+        font-size: .4rem;
+        /*color:green;*/
+    }
+}
+
+
+@media only screen and (max-width:800px) {
+    html {
+        font-size: .35rem;
+        /*color:red;*/
+    }
+}
+
+@media only screen and (max-width:720px) {
+    html {
+        font-size: .30rem;
+        /*color:cadetblue;*/
+    }
+}
+
+@media only screen and (max-width:680px) {
+    html {
+        font-size: .25rem;
+        /*color:cadetblue;*/
+    }
+}
