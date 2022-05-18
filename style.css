@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
-/* tarararrrara */
 
 * {
   padding: 0;
@@ -155,7 +154,7 @@ a, a:visited {
 
 .button a {
   color: white;
-  /* border-radius: 20px; */
+  border-radius: 20px;
   top: 25px;
   padding: 10px;
   opacity: 1;
@@ -756,6 +755,34 @@ a, a:visited {
   opacity: 0.8;
 }
 
+.container__languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+}
+
+.container__languages__item {
+  position: relative;
+  width: 50px;
+}
+
+.container__languages__item__img__box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container__languages__item__img__box__img {
+  width: 300px;
+}
+
+
+
 /*/////////////////////to tero bem////////////////////////*/
 
 .section__container{
@@ -772,7 +799,8 @@ a, a:visited {
 }
 
 
-.section__courses{
+.section__courses,
+.container__languages {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -887,143 +915,7 @@ a, a:visited {
   border-radius: 34% 66% 45% 55% / 62% 44% 56% 38%;
 }
 
-/* languages */
 
-.section__languages {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-}
-
-.section__languages__contwhite {
-  max-width: 1800px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 0;
-}
-
-.section__languages__contwhite__item {
-  position: relative;
-  margin: 1rem 3rem;
-  width: 500px;
-  height: 350px;
-}
-
-
-.section__languages__contwhite__item__img__box {
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-}
-
-.section__languages__contwhite__item__img__box__img {
-  width: 500px;
-  height: 350px;
-}
-
-.section__languages__contwhite__item__text__box {
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-size: cover;                     
-  background-repeat: no-repeat;
-  background-position: center center;  
-
-  opacity: 0;
-  transition: .5s ease;
-
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.11),
-                1px -1px 0 rgba(0, 0, 0, 0.11),
-                -1px 1px 0 rgba(0, 0, 0, 0.11),
-                1px 1px 0 rgba(0, 0, 0, 0.11);
-  font-weight: bolder;
-  font-size: 40px;
-  font-family: Lato;
-  cursor: pointer;
-  border: transparent;
-}
-
-.section__languages__contwhite__item__text__box--english {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/1024px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png');
-  color: white;
-}
-
-.section__languages__contwhite__item__text__box--french {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png');
-  color: black;
-}
-
-.section__languages__contwhite__item__text__box--italian {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1500px-Flag_of_Italy.svg.png');
-  color: black;
-}
-
-.section__languages__contwhite__item__text__box--japanese {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/800px-Flag_of_Japan.svg.png');
-  color: white;
-}
-
-
-
-.section__languages__contwhite__item:hover .section__languages__contwhite__item__text__box{
-  opacity: 1;
-  transition: 0.5s;
-}
-
-
-.chevron {
-  position: absolute;
-  width: 28px;
-  height: 8px;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #fff;
-}
-
-.chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
-}
 
 @keyframes move {
   25% {
